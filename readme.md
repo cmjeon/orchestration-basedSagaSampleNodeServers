@@ -46,4 +46,4 @@ $ curl -i -X POST -H 'Content-Type: application/json' http://localhost:{포트}/
 
 # 개선
 
-[ ] node script 로 port, service 받도록 변경하기
+- [ ] node script 로 port, service 받도록 변경하기
