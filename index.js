@@ -31,23 +31,12 @@ app.post(`/use-${service}`, (req, res) => {
 });
 
 app.post(`/rollback-${service}`,(req, res) => {
-  let returnJson = '';
-  let status = '';
-  if(isProcessSuccess()) {
-    status = 200
-    returnJson = {
-      reqPath : req.path,
-      code : 'Success',
-      message : '성공'
-    }
-  } else {
-    status = 400
-    returnJson = {
-      reqPath : req.path,
-      code : 'Fail',
-      message : '실패'
-    }
-  }
+  let returnJson = {
+    reqPath : req.path,
+    code : 'Success',
+    message : '성공'
+  };
+  let status = 200;
   console.log('::', req.path, '::', status, '::', returnJson)
   res.status(status).send(returnJson);
 });
